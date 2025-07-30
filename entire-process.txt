@@ -11,4 +11,9 @@
 7.sudo systemctl status jenkins
 8.Get the password: cat /var/lib/jenkins/secrets/initialAdminPassword
 9.Configure the security group/nsg to access the jenkins 
+10.install the aws cli where jenkins is running by below commands:
+  #curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  #sudo apt install unzip -y 
+  # unzip awscliv2.zip
+  # sudo ./aws/install
 
