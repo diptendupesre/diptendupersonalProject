@@ -9,3 +9,6 @@
 5.sudo systemctl enable jenkins
 6. sudo systemctl start jenkins
 7.sudo systemctl status jenkins
+8.Get the password: cat /var/lib/jenkins/secrets/initialAdminPassword
+9.Configure the security group/nsg to access the jenkins 
+
