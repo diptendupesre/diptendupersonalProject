@@ -49,6 +49,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashi
 sudo apt update
 sudo apt-get install terraform
 
+13.Install git on the linux system where jenkins is running 
+sudo apt install git-all
 
 
 
