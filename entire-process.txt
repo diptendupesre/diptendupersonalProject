@@ -16,4 +16,25 @@
   #sudo apt install unzip -y 
   # unzip awscliv2.zip
   # sudo ./aws/install
+11. Next go to manage jenkins -> credentials -> add credentials and give aws access and secret key to connect the ec2 instance
+
+
+## Later configure the script to check the if it is configured properly by jenkins pipeline 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('check aws cli') {
+            steps {
+                withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws-cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                sh 'aws --version'
+                sh 'aws ec2 describe-instances'
+                }
+
+            }
+        }
+    }
+}
+
 
