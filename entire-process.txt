@@ -1,0 +1,11 @@
+### Settng up the jenkins 
+1. sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+2.echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+3.sudo apt-get update
+4.sudo apt install fontconfig openjdk-21-jre -y 
+5.sudo systemctl enable jenkins
+6. sudo systemctl start jenkins
+7.sudo systemctl status jenkins
